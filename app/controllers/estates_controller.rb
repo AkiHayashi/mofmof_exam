@@ -7,7 +7,6 @@ class EstatesController < ApplicationController
   end
 
   def confirm
-    binding.irb
     @estate = Estate.new(estate_params)
     render :new if @estate.invalid?
   end
@@ -35,7 +34,7 @@ class EstatesController < ApplicationController
   end
 
   def edit
-    3.times {@estate.nearest_stations.build}
+    @estate.nearest_stations.build
   end
 
   def  update
