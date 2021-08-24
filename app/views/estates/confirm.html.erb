@@ -1,0 +1,15 @@
+<h3>以下の内容で、送信する。</h3>
+<%= form_with(model: @estate, local: true) do |form| %>
+  <%= form.hidden_field :name %>
+  <%= form.hidden_field :rent %>
+  <%= form.hidden_field :address %>
+  <%= form.hidden_field :age %>
+  <%= form.hidden_field :content %>
+  <p>物件名:<%= @estate.name %></p>
+  <p>賃料:<%= @estate.rent %></p>
+  <p>住所:<%= @estate.address %></p>
+  <p>築年数:<%= @estate.age %></p>
+  <p>備考:<%= @estate.content %></p>
+  <%= form.submit  "登録する" %>
+  <%= form.submit "戻る", name: 'back' %>
+<% end %>
