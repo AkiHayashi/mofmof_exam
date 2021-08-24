@@ -33,6 +33,7 @@ class EstatesController < ApplicationController
   end
 
   def edit
+    3.times {@estate.nearest_stations.build}
   end
 
   def  update
