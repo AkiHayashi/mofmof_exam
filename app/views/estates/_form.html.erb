@@ -56,6 +56,8 @@
     </div>
   <% end %>
 
+  <br>
+  <strong>最寄駅の数: </strong><%= @estate.nearest_stations.count%><br><br><br>
   <div class="actions">
     <%= form.submit %>
   </div>

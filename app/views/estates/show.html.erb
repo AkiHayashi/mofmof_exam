@@ -40,6 +40,7 @@
 </p>
 <% end %>
 
+<strong>最寄駅の数: </strong><%= @estate.nearest_stations.count%><br><br><br>
 
 
 <%= link_to '編集', edit_estate_path(@estate) %> |

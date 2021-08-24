@@ -7,11 +7,13 @@ class EstatesController < ApplicationController
   end
 
   def confirm
+    binding.irb
     @estate = Estate.new(estate_params)
     render :new if @estate.invalid?
   end
 
   def create
+
     @estate = Estate.new(estate_params)
     if params[:back]
       render :new
